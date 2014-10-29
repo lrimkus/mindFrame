@@ -21,5 +21,14 @@ abstract class BasePageView extends BaseView
    * @return mixed
    */
   abstract function getHTMLMetaData();
+  
+  /**
+   * Escapes HTML
+   * @param $string String - value to escpe
+   * @return String
+   */
+  public function escape($string) {
+    return htmlspecialchars($string);
+  }
 
 }
